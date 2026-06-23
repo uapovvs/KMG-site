@@ -1,0 +1,1 @@
+import{o as e,t}from"./jsx-runtime-DS8q4l0i.js";import{n}from"./dist-55mhO-BA.js";var r=e(t(),1);function i(e,t=`You submitted the following values:`){n.message(t,{description:(0,r.jsx)(`pre`,{className:`mt-2 w-full overflow-x-auto rounded-md bg-slate-950 p-4`,children:(0,r.jsx)(`code`,{className:`text-white`,children:JSON.stringify(e,null,2)})})})}export{i as t};

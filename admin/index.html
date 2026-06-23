@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./images/logo-p.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>KMG Admin</title>
+    <meta name="title" content="KMG Admin" />
+    <meta name="description" content="Панель управления ҚазМұнайГаз" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://uapovvs.github.io/KMG/admin/" />
+    <meta property="og:title" content="KMG Admin" />
+    <meta property="og:description" content="Панель управления ҚазМұнайГаз" />
+    <meta property="og:image" content="https://uapovvs.github.io/KMG/admin/images/KazMunayGas_logo.svg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content="https://uapovvs.github.io/KMG/admin/" />
+    <meta property="twitter:title" content="KMG Admin" />
+    <meta property="twitter:description" content="Панель управления ҚазМұнайГаз" />
+    <meta property="twitter:image" content="https://uapovvs.github.io/KMG/admin/images/KazMunayGas_logo.svg" />
+
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="theme-color" content="#fff" />
+    <style>
+      .preloader_container {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        z-index: 9999999;
+        background: #f0eee9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: center center;
+        will-change: transform, opacity;
+        transition: transform 0.8s cubic-bezier(0.7,0,0.3,1), opacity 0.6s ease;
+      }
+      .preloader_container.zoom-out {
+        transform: scale(30);
+        opacity: 0;
+        pointer-events: none;
+      }
+      .preloader {
+        position: relative;
+        width: 180px;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .preloader .circle {
+        position: absolute;
+        width: 100%; height: 100%;
+        z-index: 1;
+        animation: spin-loader 12s linear infinite;
+      }
+      @keyframes spin-loader {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+      }
+      .preloader_letters {
+        position: absolute;
+        width: 130%; height: 130%;
+        top: -15%; left: -15%;
+        z-index: 10;
+        font-size: 16pt;
+        color: #484745;
+        font-family: system-ui, sans-serif;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+      .preloader_letters div {
+        position: absolute;
+        opacity: 0;
+        animation: fadeIn 0.3s ease forwards;
+      }
+      .preloader_letters .k { top: 0; left: 0;   animation-delay: 0.2s; }
+      .preloader_letters .m { top: 0; right: 0;  animation-delay: 0.5s; }
+      .preloader_letters .g { bottom: -12px; left: 50%; transform: translateX(-50%); animation-delay: 0.8s; }
+      .preloader .logo {
+        position: absolute;
+        height: 90px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-D6A8mwDC.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/jsx-runtime-DS8q4l0i.js">
+    <link rel="modulepreload" crossorigin href="./assets/useRouter-DpIhFklY.js">
+    <link rel="modulepreload" crossorigin href="./assets/useStore-DsYzbB-M.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-dom-DhmXXS0w.js">
+    <link rel="modulepreload" crossorigin href="./assets/link-BcyGb5ve.js">
+    <link rel="modulepreload" crossorigin href="./assets/matchContext-CZLC4esT.js">
+    <link rel="modulepreload" crossorigin href="./assets/useSearch-CuoFK188.js">
+    <link rel="modulepreload" crossorigin href="./assets/useNavigate-D89igNC7.js">
+    <link rel="modulepreload" crossorigin href="./assets/redirect-dE0wk0WH.js">
+    <link rel="modulepreload" crossorigin href="./assets/route-BHBah3kW.js">
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-Do0chd5j.js">
+    <link rel="modulepreload" crossorigin href="./assets/Match-BHhZ3sbS.js">
+    <link rel="modulepreload" crossorigin href="./assets/createLucideIcon-BzFxKnGL.js">
+    <link rel="modulepreload" crossorigin href="./assets/arrow-right-YIF2Hhpq.js">
+    <link rel="modulepreload" crossorigin href="./assets/circle-question-mark-CCl-fu2J.js">
+    <link rel="modulepreload" crossorigin href="./assets/circle-BYG_77Ru.js">
+    <link rel="modulepreload" crossorigin href="./assets/data-BsNeFAA6.js">
+    <link rel="modulepreload" crossorigin href="./assets/client-CRhCPZKl.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-55mhO-BA.js">
+    <link rel="modulepreload" crossorigin href="./assets/zod-g0MnCZ7b.js">
+    <link rel="modulepreload" crossorigin href="./assets/cookies-Cw-hvRBQ.js">
+    <link rel="modulepreload" crossorigin href="./assets/font-provider-T9Ivrjbp.js">
+    <link rel="modulepreload" crossorigin href="./assets/dist-BRRhV8uc.js">
+    <link rel="modulepreload" crossorigin href="./assets/direction-provider-s_1Sf4B1.js">
+    <link rel="modulepreload" crossorigin href="./assets/theme-provider-TgSIszs7.js">
+    <link rel="modulepreload" crossorigin href="./assets/utils-D_stf533.js">
+    <link rel="modulepreload" crossorigin href="./assets/button-CNtW_THu.js">
+    <link rel="modulepreload" crossorigin href="./assets/general-error-DT50oUcF.js">
+    <link rel="modulepreload" crossorigin href="./assets/not-found-error-DwaheGbE.js">
+    <link rel="modulepreload" crossorigin href="./assets/_error-CvQlUbDH.js">
+    <link rel="modulepreload" crossorigin href="./assets/user-management-BZuYcLD_.js">
+    <link rel="modulepreload" crossorigin href="./assets/react-Bh0yqFKI.js">
+    <link rel="modulepreload" crossorigin href="./assets/auth-store-uMY0UNTK.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-B4h93Wxa.css">
+  </head>
+
+  <body>
+    <div class="preloader_container" id="main-preloader">
+      <div class="preloader">
+        <div class="preloader_letters">
+          <div class="k">K</div>
+          <div class="m">M</div>
+          <div class="g">G</div>
+        </div>
+        <img class="circle" src="./images/loading-clock.svg" alt="loading">
+        <img class="logo" src="./images/logo-p.svg" alt="KMG">
+      </div>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>
